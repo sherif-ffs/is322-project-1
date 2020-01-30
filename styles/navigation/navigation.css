@@ -32,7 +32,7 @@ header {
   font-size: 1.8rem;
   text-align: center;
   font-weight: 900;
-  font-family: Avenir, Lato, Helvetica, Arial, Sans-Serif;
+  font-family: Lato, Sans-Serif;
   margin-right: 10vw;
   color: #e53344;
   margin-left: 10vw;
@@ -63,14 +63,13 @@ li {
   font-family: Avenir, Lato, Helvetica, Arial, Sans-Serif;
   transition: 0.2s;
   transition-timing-function: ease-in-out;
-  border-bottom: 0px solid #222;
 }
 .nav__item:hover {
   color: #e53344;
 }
 
 .menu-toggle {
-  color: #222;
+  color: #171A21;
   float: right;
   line-height: 10vh;
   height: 10vh;
@@ -78,3 +77,95 @@ li {
   font-size: 35px;
   cursor: pointer;
 }
+
+@media (max-width: 420px) {
+  header {
+    padding: 0 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-right: 75px;
+  }
+
+  header nav {
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    top: 10vh;
+    left: -100%;
+    transition: 0.3s;
+    z-index: 10;
+  }
+
+  .nav__title {
+    margin: 0;
+    font-size: 2rem;
+    margin-left: 30px;
+  }
+
+  header nav.active {
+    left: 0%;
+  }
+
+  header nav .navigation__list {
+    display: block;
+    text-align: center;
+    margin-top: 55px;
+  }
+
+  .nav__item {
+    font-size: 45px;
+    margin-top: 30px;
+    font-weight: 700;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 420px) {
+  header {
+    padding: 0 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-right: 25vw;
+    font-size: 75px;
+  }
+
+  header nav {
+    position: fixed;
+    width: 100%;
+    height: 115vh;
+    z-index: 10;
+    background-color: #fafafa;
+    top: 10vh;
+    left: -100%;
+    transition: 0.3s;
+  }
+
+  .nav__title {
+    margin: 0;
+    font-size: 4rem !important;
+    margin-left: 10vw;
+    font-size: 55px;
+  }
+
+  header nav.active {
+    left: 0%;
+    z-index: 10;
+  }
+
+  .navigation__list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 55px;
+  }
+
+  .nav__item {
+    font-size: 65px;
+    margin-top: 50px;
+    font-weight: 700;
+  }
+}
+
+/*# sourceMappingURL=navigation.css.map */

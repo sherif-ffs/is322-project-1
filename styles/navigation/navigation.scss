@@ -1,7 +1,4 @@
-$background-color: #fafafa;
-$navigation-font: Avenir, Lato, Helvetica, Arial, Sans-Serif;
-$link-item-color: #171A21;
-$brand-color: #e53344;
+@import '../variables.scss';
 
 * {
     transition: .3s;
@@ -34,7 +31,7 @@ $brand-color: #e53344;
     font-size: 1.8rem;
     text-align: center;
     font-weight: 900;
-    font-family:  $navigation-font;
+    font-family: $header-font;
     margin-right: 10vw;
     color: $brand-color;
     margin-left: 10vw;
@@ -57,7 +54,7 @@ $brand-color: #e53344;
         font-weight: 500;
         opacity: .85;
         font-size: 1.1rem;
-        color: $link-item-color;
+        color: $body-color;
         text-decoration: none;
         display: inline-block;
         font-family:  $navigation-font;
@@ -69,10 +66,88 @@ $brand-color: #e53344;
         }
 
       .menu-toggle {
-        color: #222;
+        color: $body-color;
         float: right;
         line-height: 10vh;
         height: 10vh;
         display: none;
         font-size: 35px;
         cursor: pointer; }
+
+        
+        @media (max-width: $breakpoint-phone) {
+          header {
+            padding: 0 20px; }
+        
+          .menu-toggle {
+            display: block;
+            margin-right: 75px; }
+        
+          header nav {
+            position: absolute;
+            width: 100%;
+            height: 90vh;
+            top: 10vh;
+            left: -100%;
+            transition: .3s;
+            z-index: 10; }
+        
+          .nav__title {
+            margin: 0;
+            font-size: 2rem;
+            margin-left: 30px; }
+        
+          header nav.active {
+            left: 0%; }
+        
+          header nav .navigation__list {
+            display: block;
+            text-align: center;
+            margin-top: 55px; }
+ 
+          .nav__item {
+            font-size: 45px;
+            margin-top: 30px;
+            font-weight: 700; }
+          } 
+
+          @media screen and (max-width: $breakpoint-small-desktop) and (min-width: $breakpoint-phone) {
+            header {
+              padding: 0 20px; }
+          
+            .menu-toggle {
+              display: block;
+              margin-right: 25vw;
+              font-size: 75px; }
+          
+            header nav {
+              position: fixed;
+              width: 100%;
+              height: 115vh;
+              z-index: 10;
+              background-color: $background-color;
+              top: 10vh;
+              left: -100%;
+              transition: .3s; }
+          
+            .nav__title {
+              margin: 0;
+              font-size: 4rem!important;
+              margin-left: 10vw;
+              font-size: 55px; }
+          
+            header nav.active {
+              left: 0%;
+              z-index: 10; }
+          
+            .navigation__list {
+              display: flex;
+              flex-direction: column;
+              text-align: center;
+              margin-top: 55px; }
+          
+              .nav__item {
+                font-size: 65px;
+                margin-top: 50px;
+                font-weight: 700; }
+          }
