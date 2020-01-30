@@ -23,7 +23,6 @@ header {
   padding: 0;
   width: 100%;
   background-color: #fafafa;
-  position: absolute;
 }
 
 .nav__title {
@@ -57,7 +56,7 @@ li {
   font-weight: 500;
   opacity: 0.85;
   font-size: 1.1rem;
-  color: #171A21;
+  color: #333648;
   text-decoration: none;
   display: inline-block;
   font-family: Avenir, Lato, Helvetica, Arial, Sans-Serif;
@@ -69,7 +68,7 @@ li {
 }
 
 .menu-toggle {
-  color: #171A21;
+  color: #333648;
   float: right;
   line-height: 10vh;
   height: 10vh;
@@ -91,7 +90,9 @@ li {
   header nav {
     position: absolute;
     width: 100%;
+    background-color: #e53344;
     height: 90vh;
+    margin-top: 2vh;
     top: 10vh;
     left: -100%;
     transition: 0.3s;
@@ -117,6 +118,7 @@ li {
   .nav__item {
     font-size: 45px;
     margin-top: 30px;
+    color: #fff;
     font-weight: 700;
   }
 }
@@ -136,7 +138,8 @@ li {
     width: 100%;
     height: 115vh;
     z-index: 10;
-    background-color: #fafafa;
+    margin-top: 4vh;
+    background-color: #e53344;
     top: 10vh;
     left: -100%;
     transition: 0.3s;
@@ -144,7 +147,7 @@ li {
 
   .nav__title {
     margin: 0;
-    font-size: 4rem !important;
+    font-size: 3.5rem !important;
     margin-left: 10vw;
     font-size: 55px;
   }
@@ -164,6 +167,7 @@ li {
   .nav__item {
     font-size: 65px;
     margin-top: 50px;
+    color: white;
     font-weight: 700;
   }
 }

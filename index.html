@@ -7,7 +7,9 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/navigation/navigation.css">
+    <link rel="stylesheet" href="styles/slider/slider.css">
     <script defer src="scripts/navigation.js"></script>
+    <script defer src="scripts/landing.js"></script>
     <title>We Sell Clothes</title>
 </head>
 <body>
@@ -16,11 +18,41 @@
     <nav id="nav">
         <ul class="navigation__list">
             <li ><a href="#" class="nav__item">products</a></li>
-            <li><a href="#" class="nav__item">faq</a></li>
-            <li ><a href="#" target="_blank" target="_blank" class="nav__item">learn more</a></li>
+            <li><a href="#" class="nav__item">learn more</a></li>
+            <li ><a href="#" target="_blank" target="_blank" class="nav__item">contact</a></li>
         </ul>
     </nav>
   <div class="menu-toggle"><i class="fa fa-bars"></i></div>
-</header>
+    </header>
+
+<section>
+    <aside>
+        <div class="text-wrapper">
+            <h1 class="text-wrapper__title">We Sell Clothes Online</h1>
+            <h3 class="text-wrapper__subtitle">and that's about it...</h3>
+            <button class="text-wrapper__button">Shop now</button>
+        </div>
+    </aside>
+    <div class="slider-container">
+            <div class="slider-container__slider">
+
+                <div class="slides-container fade">
+                    <img class="slides-container__slide" src="assets/slideshow-photos/slideshow-photo-1.png" style="width:100%; height: 100%;">
+                </div>
+                
+                <div class="slides-container fade">
+                    <img class="slides-container__slide" src="assets/slideshow-photos/slideshow-photo-2.png" style="width:100%; height: 100%;">
+                </div>
+                
+                <div class="slides-container fade">
+                    <img class="slides-container__slide" src="assets/slideshow-photos/slideshow-photo-3.png" style="width:100%; height: 100%;">
+                </div>
+                
+                <i class="slider-container__arrow prev fa fa-chevron-circle-left"></i>
+                <i class="slider-container__arrow next fa fa-chevron-circle-right"></i>
+                </div>
+    </div>
+    
+</section>
 </body>
 </html>
