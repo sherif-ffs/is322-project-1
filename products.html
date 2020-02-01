@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/navigation/navigation.css">
+    <link rel="stylesheet" href="styles/products/products.css">
+    <script defer src="scripts/navigation.js"></script>
+    <script defer src="scripts/products.js"></script>
+    <title>Products</title>
+</head>
+<body>
+    <header>
+        <div><a href="index.html" class="nav__title">clothes.com</a></div>
+        <nav id="nav">
+            <ul class="navigation__list">
+                <li ><a href="#" class="nav__item">products</a></li>
+                <li><a href="#" class="nav__item">learn more</a></li>
+                <li ><a href="#" target="_blank" target="_blank" class="nav__item">contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle"><i class="fa fa-bars"></i></div>
+    </header>
+    <section>
+        <aside class="filters-container">
+            <select class="filter-by-price" name="orderBy">
+                <option selected="selected">Order by price</option>                
+                <option value="LOW-HIGH">Price Lowest-Highest</option>
+                <option value="HIGH-LOW">Price: Highest-Lowest</option>
+            </select>
+
+            <div class="checkbox-container" style="margin-top: 10vh">
+                    <label><input checked class="checkbox" type="checkbox" name="result" rel="pants" >Pants
+                    </label>
+            </div>
+            <div class="checkbox-container">
+                <label><input checked class="checkbox" type="checkbox" name="result" rel="sock" >Socks
+                </label>
+            </div>
+            <div class="checkbox-container">
+                <label><input checked class="checkbox" type="checkbox" name="result" rel="shirt" >Shirt
+                </label>
+            </div>
+        </aside>
+        <div class="products-container"></div>
+    </section>
+</body>
+</html>

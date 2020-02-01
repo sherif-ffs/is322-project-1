@@ -1,0 +1,42 @@
+@import '../variables.scss';
+
+section {
+    width: 100%;
+    height: auto;
+    margin-top: 3vh;
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+}
+
+.filters-container {
+    display: flex;
+    flex: .25;
+    flex-direction: column;
+    border: 1px solid red;
+    // height: min-content;
+}
+.products-container {
+    display: flex;
+    flex: 1;
+    height: min-content;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid red;
+}
+.product {
+    border: 1px solid blue;
+    margin: 15px;
+    margin-top: 30px;
+    width: 30%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product__img {
+    height: 80%;
+    margin: 0;
+    padding:0;
+    width: auto;
+}
