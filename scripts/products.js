@@ -1,67 +1,74 @@
 (function() {
     let mockDatabase = [
         {
-            title: 'test product 1',
+            title: 'Cotton Pique Socks',
             price: '5$',
             id: 1,
             tag:'sock',
-            img: ''
+            img: 'assets/products-photos/black_socks.jpg'
         },
         {
-            title: 'test product 2',
+            title: 'Crew Neck T-shirt',
             price: '12$',
             id: 2,
             tag:'shirt',
-            img: ''
+            img: 'assets/products-photos/orange_shirt.jpg'
         },
         {
-            title: 'test product 3',
-            price: '7$',
+            title: 'Cotton longsleeve T-shirt',
+            price: '15$',
             id: 3,
             tag: 'shirt',
-            img: ''
+            img: 'assets/products-photos/pink_longsleeve.jpg'
         },
         {
-            title: 'test product 4',
-            price: '25$',
+            title: 'Men Slub Socks',
+            price: '8$',
             id: 4,
             tag: "sock",
-            img: ''
+            img: 'assets/products-photos/yellow_socks.jpg'
         },
         {
-            title: 'test product 5',
-            price: '25$',
-            id: 5,
-            tag:'sock',
-            img: ''
-        },
-        {
-            title: 'test product 6',
-            price: '15$',
+            title: 'Crew Neck T-shirt',
+            price: '12$',
             id: 6,
             tag:'shirt',
-            img: ''
+            img: 'assets/products-photos/blue_shirt.jpg'
         },
         {
-            title: 'test product 7',
-            price: '5$',
+            title: 'Chino Shorts',
+            price: '30$',
             id: 7,
             tag:'pants',
-            img: ''
+            img: 'assets/products-photos/chino_shorts.jpg'
         },
         {
-            title: 'test product 8',
-            price: '16$',
+            title: 'Slim Chino Pants',
+            price: '45$',
             id: 8,
             tag:'pants',
-            img: ''
+            img: 'assets/products-photos/chino_pants.jpg'
         },
         {
-            title: 'test product 9',
-            price: '90$',
+            title: 'Cotton V-neck T-shirt',
+            price: '35$',
             id: 9,
             tag:'shirt',
-            img: ''
+            img: 'assets/products-photos/yellow_vneck.jpg'
+        },
+        {
+            title: `Men's Striped Socks`,
+            price: '10$',
+            id: 5,
+            tag:'sock',
+            img: 'assets/products-photos/red_socks.jpg'
+        },
+        {
+            title: `Slim Fit Jeans`,
+            price: '40$',
+            id: 10,
+            tag:'pants',
+            img: 'assets/products-photos/slim_fit_jeans.jpg'
         },
     ]
 
@@ -73,9 +80,11 @@
 		const products = results.map(function (product, index) {
             return (
                 `<div class="product">
-                    <img class="product__img" src="https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/422989/item/goods_62_422989.jpg?width=380"></img>
-                    <h1 class="product__title">${product.title}</h1>
-                    <h3 class="product__price">${product.price}</h3>
+                    <img class="product__img" src="${product.img}"></img>
+                    <div class="product-information">
+                        <h3 class="product-information__title">${product.title}</h3>
+                        <h1 class="product-information__price">${product.price}</h1>
+                    </div>
                 </div>`
             )
         });
