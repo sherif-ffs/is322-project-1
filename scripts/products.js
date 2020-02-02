@@ -18,7 +18,7 @@
             title: 'test product 3',
             price: '7$',
             id: 3,
-            tag: 'pants',
+            tag: 'shirt',
             img: ''
         },
         {
@@ -53,7 +53,7 @@
             title: 'test product 8',
             price: '16$',
             id: 8,
-            tag:'pant',
+            tag:'pants',
             img: ''
         },
         {
@@ -87,13 +87,35 @@
 
 	renderProducts(mockDatabase);
 
-    document.querySelector('.filter-by-price').addEventListener('change', function(){
+    // Update database to be rendered/sorted/filtered
+    let filteredDatabase = mockDatabase;
+
+    // Sort by price
+    document.querySelector('.sort-by-price').addEventListener('change', function(){
         if (this.value == 'LOW-HIGH') {
-            // mockDatabase.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
-            mockDatabase = mockDatabase.filter(product => product.price > '50');            
-            renderProducts(mockDatabase);
+            filteredDatabase.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+            renderProducts(filteredDatabase);
         } if (this.value == 'HIGH-LOW') {
-            mockDatabase.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+            filteredDatabase.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+            renderProducts(filteredDatabase);
+        }
+    });
+
+    // Filter by article of clothing
+    document.querySelector('.filter-by-article').addEventListener('change', function(){
+        if (this.value == 'SHIRT') {
+            filteredDatabase = mockDatabase.filter(product => product.tag == 'shirt'); 
+            document.querySelector('.sort-by-price').value = 'DEFAULT';           
+            renderProducts(filteredDatabase);
+        } if (this.value == 'PANTS') {
+            filteredDatabase = mockDatabase.filter(product => product.tag == 'pants');     
+            document.querySelector('.sort-by-price').value = 'DEFAULT';           
+            renderProducts(filteredDatabase);
+        } if (this.value == 'SOCKS') {
+            filteredDatabase = mockDatabase.filter(product => product.tag == 'sock'); 
+            document.querySelector('.sort-by-price').value = 'DEFAULT';           
+            renderProducts(filteredDatabase);
+        } if (this.value == "ALL") {
             renderProducts(mockDatabase);
         }
     });

@@ -26,24 +26,19 @@
     </header>
     <section>
         <aside class="filters-container">
-            <select class="filter-by-price" name="orderBy">
-                <option selected="selected">Order by price</option>                
+            <select class="sort-by-price" name="orderBy">
+                <option value="DEFAULT" selected="selected">Order by price</option>                
                 <option value="LOW-HIGH">Price Lowest-Highest</option>
                 <option value="HIGH-LOW">Price: Highest-Lowest</option>
             </select>
 
-            <div class="checkbox-container" style="margin-top: 10vh">
-                    <label><input checked class="checkbox" type="checkbox" name="result" rel="pants" >Pants
-                    </label>
-            </div>
-            <div class="checkbox-container">
-                <label><input checked class="checkbox" type="checkbox" name="result" rel="sock" >Socks
-                </label>
-            </div>
-            <div class="checkbox-container">
-                <label><input checked class="checkbox" type="checkbox" name="result" rel="shirt" >Shirt
-                </label>
-            </div>
+            <select class="filter-by-article" name="orderBy">
+                <option selected="selected">Filter by Article</option>   
+                <option value="ALL">All</option>
+                <option value="SHIRT">Shirts</option>
+                <option value="SOCKS">Socks</option>
+                <option value="PANTS">Pants</option>
+            </select>
         </aside>
         <div class="products-container"></div>
     </section>
