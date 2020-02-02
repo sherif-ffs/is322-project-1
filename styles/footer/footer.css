@@ -26,8 +26,8 @@ footer {
 .links-wrapper__title {
   margin-left: 20%;
   font-family: Avenir, Lato, Helvetica, Arial, Sans-Serif;
-  font-weight: 900;
-  font-size: 1.8rem;
+  font-weight: 600;
+  font-size: 1.7rem;
   margin-top: -1%;
   transition: 0.3s;
   color: #6d0610;
@@ -40,6 +40,7 @@ footer {
 
 .footer-icons {
   margin-left: 15%;
+  margin-top: 5%;
   width: 80%;
   display: flex;
   flex-direction: row;
