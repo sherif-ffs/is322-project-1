@@ -3,6 +3,7 @@ section {
   height: auto;
   margin-top: 3vh;
   display: flex;
+  margin-bottom: 25vh;
   flex-direction: row;
 }
 
@@ -23,11 +24,10 @@ section {
 }
 
 .product {
-  border: 1px solid blue;
   margin: 15px;
-  margin-top: 30px;
+  margin-top: 50px;
   width: 30%;
-  height: 350px;
+  height: 400px;
   display: flex;
   flex-direction: column;
 }
@@ -35,8 +35,54 @@ section {
 .product__img {
   height: 80%;
   margin: 0;
+  border-radius: 5px;
   padding: 0;
   width: auto;
+  transition: 0.5s;
+}
+.product__img:hover {
+  transition: 0.5s;
+  box-shadow: 0px 1px 10px rgba(34, 34, 34, 0.3);
+  cursor: pointer;
+}
+
+.product-information {
+  display: flex;
+  margin-top: 1vh;
+  flex-direction: row;
+}
+
+.product-information__title {
+  justify-content: flex-start;
+  margin-left: 5%;
+  font-size: 1.1rem;
+  display: flex;
+  font-weight: 500;
+  flex: 3;
+  color: #333648;
+  font-family: Avenir, Lato, Helvetica, Arial, Sans-Serif;
+  transition: 0.5s;
+}
+.product-information__title:hover {
+  transition: 0.3s;
+  cursor: pointer;
+  color: #e53344;
+}
+
+.product-information__price {
+  justify-content: flex-end;
+  margin-right: 5%;
+  display: flex;
+  font-size: 1.4rem;
+  flex: 1;
+  font-family: Lato, Sans-Serif;
+  color: #e53344;
+  font-weight: 900;
+}
+
+.colors-container ul {
+  display: flex;
+  flex-direction: row;
 }
 
 /*# sourceMappingURL=products.css.map */

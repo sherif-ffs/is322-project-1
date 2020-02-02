@@ -6,6 +6,7 @@ section {
     margin-top: 3vh;
     // border: 1px solid red;
     display: flex;
+    margin-bottom: 25vh;
     flex-direction: row;
 }
 
@@ -25,11 +26,11 @@ section {
     border: 1px solid red;
 }
 .product {
-    border: 1px solid blue;
+    // border: 1px solid blue;
     margin: 15px;
-    margin-top: 30px;
+    margin-top: 50px;
     width: 30%;
-    height: 350px;
+    height: 400px;
     display: flex;
     flex-direction: column;
 }
@@ -37,6 +38,52 @@ section {
 .product__img {
     height: 80%;
     margin: 0;
+    border-radius: 5px;
     padding:0;
     width: auto;
+    transition: .5s;
+    &:hover {
+        transition: .5s;
+        box-shadow: 0px 1px 10px rgba(34, 34, 34,.3);
+        // margin-top: -1px;
+        cursor: pointer;
+    }
+}
+
+.product-information {
+    display: flex;
+    margin-top: 1vh;
+    // background-color: #f5f5f5;
+    flex-direction: row;
+}
+.product-information__title {
+    justify-content: flex-start;
+    margin-left: 5%;
+    // border: 1px solid red;
+    font-size: 1.1rem;
+    display: flex;
+    font-weight: 500;
+    flex: 3;
+    color: $body-color;
+    font-family: $body-font;
+    transition: .5s;
+    &:hover {
+        transition: .3s;
+        cursor: pointer;
+        color: $brand-color;
+    }
+}
+.product-information__price {
+    justify-content: flex-end;
+    margin-right: 5%;
+    display: flex;
+    font-size: 1.4rem;
+    flex: 1;
+    font-family: $header-font;
+    color: $brand-color;
+    font-weight: 900;
+}
+.colors-container ul{
+    display: flex;
+    flex-direction: row;
 }
