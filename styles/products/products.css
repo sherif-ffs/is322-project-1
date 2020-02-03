@@ -11,7 +11,31 @@ section {
   display: flex;
   flex: 0.25;
   flex-direction: column;
-  border: 1px solid red;
+}
+
+.select {
+  width: 80%;
+  margin-left: 10%;
+  height: 35px;
+  padding: 50px;
+  background-color: #e53344;
+  font-family: Lato, Sans-Serif;
+  color: white;
+  outline: none;
+  border: none;
+  box-shadow: 0px 1px 10px rgba(34, 34, 34, 0.3);
+  font-weight: 800;
+  border-radius: 0px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.sort-by-price {
+  margin-top: 10vh;
+}
+
+.filter-by-article {
+  margin-top: 5vh;
 }
 
 .products-container {
@@ -72,15 +96,15 @@ section {
   justify-content: flex-end;
   margin-right: 5%;
   display: flex;
-  font-size: 1.3em;
+  font-size: 1.2em;
   flex: min-content;
   border-radius: 3px;
   text-align: center;
   font-family: Lato, Sans-Serif;
   padding-right: 8px;
   padding-left: 10px;
-  padding-top: 1px;
-  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-bottom: 1px;
   color: #fafafa;
   background-color: #e53344;
   box-shadow: 0px 1px 10px rgba(34, 34, 34, 0.3);
