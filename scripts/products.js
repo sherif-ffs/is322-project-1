@@ -125,6 +125,8 @@
             document.querySelector('.sort-by-price').value = 'DEFAULT';           
             renderProducts(filteredDatabase);
         } if (this.value == "ALL") {
+            filteredDatabase = mockDatabase; 
+            document.querySelector('.sort-by-price').value = 'DEFAULT';           
             renderProducts(mockDatabase);
         }
     });
