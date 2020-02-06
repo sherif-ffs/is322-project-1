@@ -11,7 +11,52 @@ section {
   display: flex;
   flex: 0.25;
   flex-direction: column;
-  height: 200px;
+  height: 33vh;
+}
+
+.search-container {
+  display: flex;
+  flex: 1;
+  background-color: white;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 10vh;
+  box-shadow: 0px 1px 10px rgba(34, 34, 34, 0.1);
+  font-weight: 800;
+  border-radius: 5px;
+}
+
+.search-container__search-icon {
+  color: #e53344;
+  font-size: 1.3rem;
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
+.search-container__search-bar {
+  background-color: white;
+  font-family: Lato, Sans-Serif;
+  width: 55%;
+  margin-left: 5%;
+  border: none;
+  outline: none;
+  color: #333648;
+  font-size: 13px;
+}
+.search-container__search-bar::placeholder {
+  color: #333648;
+}
+
+.search-container__button {
+  background-color: #e53344;
+  color: white;
+  border: none;
+  font-weight: 600;
+  font-family: Avenir, Lato, Helvetica, Arial, Sans-Serif;
+  font-size: 0.9rem;
+  padding: 2px;
+  border-radius: 5px;
+  flex: 1;
 }
 
 .select {
@@ -25,14 +70,14 @@ section {
   outline: none;
   border: none;
   box-shadow: 0px 1px 10px rgba(34, 34, 34, 0.3);
-  font-weight: 800;
+  font-weight: 600;
   border-radius: 0px;
   font-size: 0.9rem;
   cursor: pointer;
 }
 
 .sort-by-price {
-  margin-top: 10vh;
+  margin-top: 5vh;
 }
 
 .filter-by-article {
@@ -124,30 +169,54 @@ section {
     margin-left: 0px;
     margin: 0;
     padding: 0;
-    flex-direction: row;
+    flex-direction: column-reverse;
+    margin-left: 5%;
   }
 
   .select {
     display: flex;
     flex: 0.5;
-    width: 20%;
+    width: 90%;
+    font-size: 1.5rem;
     color: white !important;
     padding: 15px;
   }
 
+  .search-container {
+    margin-top: 3vh;
+    margin-left: 0px;
+    width: 90%;
+  }
+
+  .search-container__search-bar {
+    width: 50%;
+    flex: 3;
+    font-size: 1.2rem;
+  }
+
+  .search-container__search-icon {
+    font-size: 2.75rem;
+    display: none;
+  }
+
+  .search-container__button {
+    flex: 2;
+    font-size: 1.5rem;
+  }
+
   .sort-by-price {
-    margin-top: 5vh;
+    margin-top: 3vh;
     margin-left: 0px;
   }
 
   .filter-by-article {
-    margin-top: 5vh;
+    margin-top: 3vh;
     margin-left: 0px;
   }
 
   .product {
     margin: 15px;
-    margin-top: 120px;
+    margin-top: 50px;
     width: 100%;
     margin-left: 0px;
     height: 400px;
@@ -168,24 +237,50 @@ section {
     margin-left: 0px;
     margin: 0;
     padding: 0;
-    flex-direction: row;
+    height: 25vh;
+    margin-top: 5%;
+    flex-direction: column-reverse;
+    margin-left: 15%;
   }
 
   .select {
     display: flex;
     flex: 0.5;
-    width: 20%;
+    width: 70%;
+    font-size: 1.5rem;
     color: white !important;
     padding: 15px;
   }
 
+  .search-container {
+    margin-top: 3vh;
+    margin-left: 0px;
+    width: 70%;
+  }
+
+  .search-container__search-bar {
+    width: 50%;
+    flex: 3;
+    font-size: 1.2rem;
+  }
+
+  .search-container__search-icon {
+    font-size: 2.75rem;
+    display: none;
+  }
+
+  .search-container__button {
+    flex: 2;
+    font-size: 1.5rem;
+  }
+
   .sort-by-price {
-    margin-top: 5vh;
+    margin-top: 3vh;
     margin-left: 0px;
   }
 
   .filter-by-article {
-    margin-top: 5vh;
+    margin-top: 3vh;
     margin-left: 0px;
   }
 
