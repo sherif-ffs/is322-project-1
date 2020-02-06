@@ -28,18 +28,24 @@
     </header>
     <section>
         <aside class="filters-container">
+            <div class="search-container">
+                <i class="fa fa-search search-container__search-icon"></i>
+                <input type="text" placeholder="Search products..." class="search-container__search-bar">
+                <button class="search-container__button">search</button>
+            </div>
+
             <select class="sort-by-price select" name="orderBy">
-                <option value="DEFAULT" selected="selected">Order by price</option>                
-                <option value="LOW-HIGH">Price Lowest-Highest</option>
-                <option value="HIGH-LOW">Price: Highest-Lowest</option>
+                <option value="DEFAULT" selected="selected">order by price</option>                
+                <option value="LOW-HIGH">lowest-highest</option>
+                <option value="HIGH-LOW">highest-lowest</option>
             </select>
 
             <select class="filter-by-article select" name="orderBy">
-                <option selected="selected">Filter by Article</option>   
-                <option value="ALL">All</option>
-                <option value="SHIRT">Shirts</option>
-                <option value="SOCKS">Socks</option>
-                <option value="PANTS">Pants</option>
+                <option selected="selected">filter by article</option>   
+                <option value="ALL">all</option>
+                <option value="SHIRT">shirts</option>
+                <option value="SOCKS">socks</option>
+                <option value="PANTS">pants</option>
             </select>
         </aside>
         <div class="products-container"></div>
