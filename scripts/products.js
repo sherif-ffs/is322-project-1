@@ -78,16 +78,17 @@
         productContainer.innerHTML = '';
 
 		const products = results.map(function (product, index) {
-            // console.log('index: ', index)
             return (
-                `<div class="product">
+                `
+                <div class="product">
                     <img class="product__img" src="${product.img}" id="${index}"></img>
                     <div class="product-information">
                         <h3 class="product-information__title">${product.title}</h3>
                         <h1 class="product-information__price">${product.price}</h1>
                     </div>
                 </div>
-                <!-- modal -->
+                
+                <!-- START OF MODAL -->
                 <div id="${index}content" class="modal">
                 <div class="modal-content">
                     <div class="modal-img-container">
@@ -109,35 +110,35 @@
                         <p class="label label-size">Size: </p>
                         <div class="modal-product-sizes-container">
                             <div class="size">
-                            <p>XXS</p>                            
+                                <p>XXS</p>                            
                             </div>
                             <div class="size">
-                            <p>XS</p>                            
+                                <p>XS</p>                            
                             </div>
                             <div class="size">
-                            <p class="single">S</p>                            
+                                <p class="single">S</p>                            
                             </div>
                             <div class="size">
-                            <p>M</p>                            
+                                <p>M</p>                            
                             </div>
                             <div class="size">
-                            <p class="single">L</p>                            
+                                <p class="single">L</p>                            
                             </div>
                             <div class="size">
-                            <p>XL</p>                            
+                                <p>XL</p>                            
                             </div>
                             <div class="size">
-                            <p>XXL</p>                            
+                                <p>XXL</p>                            
                             </div>
                             <div class="size">
-                            <p>3XL</p>                            
+                                <p>3XL</p>                            
                             </div>
                         </div>
                 <button class="modal-product-button">Add To Bag</button>
                     </div>
                 </div>
                 </div>
-                <!-- end of modal -->
+                <!-- END OF MODAL -->
                 `
             )
         });
@@ -149,11 +150,35 @@
 
 	renderProducts(mockDatabase);
 
+
+    // FILTER/SORT/SEARCH FUNCTIONS
+    const searchBar = document.querySelector('.search-container__search-bar');    
+
+    document.querySelector('.search-container__button').addEventListener('click', searchProducts)
+    document.querySelector('.sort-by-price').addEventListener('change', sortByPrice);
+    document.querySelector('.filter-by-article').addEventListener('change', filterByArticle);
+
+    // add event listener to enter key
+    searchBar.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+          searchProducts();
+        }
+    });
+
     // Update database to be rendered/sorted/filtered
     let filteredDatabase = mockDatabase;
 
-    // Sort by price
-    document.querySelector('.sort-by-price').addEventListener('change', function(){
+    function searchProducts() {
+        let searchInput = searchBar.value;
+        filteredDatabase = mockDatabase.filter(product => product.title.toLowerCase().includes(searchInput.toLowerCase()));
+        if (filteredDatabase.length == 0 || searchInput == 'all') {
+            renderProducts(mockDatabase);
+        }
+        renderProducts(filteredDatabase);
+        grabProducts();
+    }
+
+    function sortByPrice() {
         if (this.value == 'LOW-HIGH') {
             filteredDatabase.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
             renderProducts(filteredDatabase);
@@ -163,10 +188,9 @@
             renderProducts(filteredDatabase);
             grabProducts();
         }
-    });
+    }
 
-    // Filter by article of clothing
-    document.querySelector('.filter-by-article').addEventListener('change', function(){
+    function filterByArticle() {
         if (this.value == 'SHIRT') {
             filteredDatabase = mockDatabase.filter(product => product.tag == 'shirt'); 
             document.querySelector('.sort-by-price').value = 'DEFAULT';           
@@ -188,20 +212,14 @@
             renderProducts(mockDatabase);
             grabProducts();
         }
-    });
+    }
+
     
-    const modal = document.querySelector("modal");
-    let left = document.querySelector('.left');
-    let cards = document.querySelectorAll('.card');
-
-
 function grabProducts() {
     for (let i=0; i<10; i++) {
         document.getElementById(`${i}`).addEventListener('click', function() {
             showmodal(`${i}`)
         });
-        
-        // check if close icon exists
         if (document.getElementById(`${i}close`)) {
             document.getElementById(`${i}close`).addEventListener('click', function() {
                 closeModal(`${i}`)
