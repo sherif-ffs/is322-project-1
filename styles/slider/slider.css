@@ -311,5 +311,27 @@ aside {
     margin-left: 0;
   }
 }
+@media screen and (min-width: 1366px) {
+  .text-wrapper {
+    margin-left: 30%;
+  }
+
+  .text-wrapper__title {
+    font-size: 2.8rem;
+  }
+
+  .text-wrapper__subtitle {
+    font-size: 1.6rem;
+    font-weight: 200;
+    opacity: 0.8;
+    margin-top: -7%;
+  }
+
+  .text-wrapper__button {
+    width: 45%;
+    height: 10%;
+    font-size: 1.4rem;
+  }
+}
 
 /*# sourceMappingURL=slider.css.map */
