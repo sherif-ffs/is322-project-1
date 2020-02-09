@@ -157,6 +157,33 @@ section {
   flex-direction: row;
 }
 
+.message-container {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 4%;
+  border: 25px dotted #e53344;
+  height: 50vh;
+}
+
+.message-container__message {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 15%;
+  opacity: 0.8;
+  line-height: 50px;
+  font-family: Avenir, Lato, Helvetica, Arial, Sans-Serif;
+  color: #333648;
+  font-weight: 100;
+}
+
+.empty-searchinput {
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin-left: 3px;
+  margin-right: 3px;
+  color: #e53344;
+}
+
 @media (max-width: 420px) {
   section {
     flex-direction: column;

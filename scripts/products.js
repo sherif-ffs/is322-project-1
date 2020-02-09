@@ -4,35 +4,35 @@
             title: 'Cotton Pique Socks',
             price: '5$',
             id: 0,
-            tag:'sock',
+            tag:'socks',
             img: 'assets/products-photos/black_socks.jpg'
         },
         {
             title: 'Crew Neck T-shirt',
             price: '12$',
             id: 1,
-            tag:'shirt',
+            tag:'shirts',
             img: 'assets/products-photos/orange_shirt.jpg'
         },
         {
             title: 'Cotton longsleeve T-shirt',
             price: '15$',
             id: 2,
-            tag: 'shirt',
+            tag: 'shirts',
             img: 'assets/products-photos/pink_longsleeve.jpg'
         },
         {
             title: 'Men Slub Socks',
             price: '8$',
             id: 3,
-            tag: "sock",
+            tag: "socks",
             img: 'assets/products-photos/yellow_socks.jpg'
         },
         {
             title: 'Crew Neck T-shirt',
             price: '12$',
             id: 4,
-            tag:'shirt',
+            tag:'shirts',
             img: 'assets/products-photos/blue_shirt.jpg'
         },
         {
@@ -53,14 +53,14 @@
             title: 'Cotton V-neck T-shirt',
             price: '35$',
             id: 7,
-            tag:'shirt',
+            tag:'shirts',
             img: 'assets/products-photos/yellow_vneck.jpg'
         },
         {
             title: `Men's Striped Socks`,
             price: '10$',
             id: 8,
-            tag:'sock',
+            tag:'socks',
             img: 'assets/products-photos/red_socks.jpg'
         },
         {
@@ -72,8 +72,10 @@
         },
     ]
 
+    
+    const productContainer = document.querySelector('.products-container');
+    
     function renderProducts (results) {
-		const productContainer = document.querySelector('.products-container');
 
         productContainer.innerHTML = '';
 
@@ -143,9 +145,9 @@
             )
         });
         
-		products.forEach(function (product) {
-			productContainer.innerHTML += product;
-		});
+    products.forEach(function (product) {
+        productContainer.innerHTML += product;
+    });
 	}
 
 	renderProducts(mockDatabase);
@@ -169,13 +171,26 @@
     let filteredDatabase = mockDatabase;
 
     function searchProducts() {
-        let searchInput = searchBar.value;
+        let searchInput = searchBar.value; // whatever the user types in
         filteredDatabase = mockDatabase.filter(product => product.title.toLowerCase().includes(searchInput.toLowerCase()));
-        if (filteredDatabase.length == 0 || searchInput == 'all') {
-            renderProducts(mockDatabase);
+        if (filteredDatabase.length == 0) {
+            // If there are no matches
+            productContainer.innerHTML = ''
+            const messageContainer = document.createElement('div');
+            messageContainer.className = 'message-container';
+            const noResultsFoundMessage = document.createElement('h1');
+            noResultsFoundMessage.className = 'message-container__message'
+            noResultsFoundMessage.innerHTML = 
+            `
+                Sorry, your search <span class="empty-searchinput"><i>${searchInput}</i></span> returned nothing :(
+            `;
+            messageContainer.appendChild(noResultsFoundMessage)
+            productContainer.appendChild(messageContainer);
+        } else {
+            console.log('filteredDatabase: ', filteredDatabase)
+            renderProducts(filteredDatabase);
+            grabProducts();
         }
-        renderProducts(filteredDatabase);
-        grabProducts();
     }
 
     function sortByPrice() {
@@ -192,7 +207,7 @@
 
     function filterByArticle() {
         if (this.value == 'SHIRT') {
-            filteredDatabase = mockDatabase.filter(product => product.tag == 'shirt'); 
+            filteredDatabase = mockDatabase.filter(product => product.tag == 'shirts'); 
             document.querySelector('.sort-by-price').value = 'DEFAULT';           
             renderProducts(filteredDatabase);
             grabProducts();
@@ -202,7 +217,7 @@
             renderProducts(filteredDatabase);
             grabProducts();
         } if (this.value == 'SOCKS') {
-            filteredDatabase = mockDatabase.filter(product => product.tag == 'sock'); 
+            filteredDatabase = mockDatabase.filter(product => product.tag == 'socks'); 
             document.querySelector('.sort-by-price').value = 'DEFAULT';           
             renderProducts(filteredDatabase);
             grabProducts();
