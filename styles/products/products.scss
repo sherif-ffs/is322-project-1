@@ -294,7 +294,7 @@ section {
     }
 }
 
-@media screen and (min-width: $breakpoint-large-desktop) {
+@media screen and (max-width: $breakpoint-large-desktop) {
     .product {
         margin: 15px;
         margin-top: 50px;

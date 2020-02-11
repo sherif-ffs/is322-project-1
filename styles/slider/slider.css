@@ -311,7 +311,7 @@ aside {
     margin-left: 0;
   }
 }
-@media screen and (min-width: 1366px) {
+@media screen and (max-width: 1366px) {
   .text-wrapper {
     margin-left: 30%;
   }

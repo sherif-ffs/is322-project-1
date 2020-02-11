@@ -279,7 +279,7 @@ aside {
     }
   }
 
-  @media screen and (min-width: $breakpoint-large-desktop) {
+  @media screen and (max-width: $breakpoint-large-desktop) {
     .text-wrapper {
         margin-left: 30%;
     }
