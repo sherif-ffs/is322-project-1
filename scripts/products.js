@@ -247,10 +247,12 @@ grabProducts();
 
 function showmodal(id) {
     document.getElementById(id+'content').style.display = "flex";
+    document.body.style.position = 'fixed';
 }
 
 function closeModal(id) {
   document.getElementById(id+'content').style.display = "none";
+  document.body.style.position = 'relative';
 }
 
 
