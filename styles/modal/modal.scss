@@ -280,7 +280,7 @@
     }
 
 
-    @media screen and (max-width: $breakpoint-large-desktop) {
+    @media screen and (max-width: $breakpoint-large-desktop) and (min-width: $breakpoint-small-desktop) {
         .modal {
             margin-top: -8%;
             height: calc(100% + 15%);

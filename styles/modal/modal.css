@@ -320,7 +320,7 @@
     width: 80%;
   }
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1366px) and (min-width: 1024px) {
   .modal {
     margin-top: -8%;
     height: calc(100% + 15%);
