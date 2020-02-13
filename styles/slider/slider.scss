@@ -274,12 +274,14 @@ aside {
       } 
 
     .icons-wrapper {
-        width: 100%;
-        margin-left: 0;
+        width: 80%;
+        margin-left: 5%;
+        margin-right: 0;
+        // flex-direction: column;
     }
   }
 
-  @media screen and (max-width: $breakpoint-large-desktop) {
+  @media screen and (max-width: $breakpoint-large-desktop) and (min-width: $breakpoint-small-desktop) {
     .text-wrapper {
         margin-left: 30%;
     }
